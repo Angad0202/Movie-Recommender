@@ -1,0 +1,47 @@
+h1, form, p {
+    text-align: center;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 2em;
+}
+
+input[type="text"] {
+    padding: 0.5em;
+    font-size: 1.2em;
+    margin-right: 0.5em;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+}
+#recommendations-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .recommendation {
+    animation: appear 0.5s ease-in;
+    animation-delay: 0.1s;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

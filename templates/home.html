@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie Recommendations</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <h1>Find movie recommendations</h1>
+        <form action="{{url_for('get_recommendations')}}" method="POST">
+            <input type="text" id="movie-title" name="title" placeholder="Enter movie title">
+            <input type="submit" value="Get Recommendations">
+          </form>
+        <div>{{message}}</div>
+        <h1>{{title}}</h1>
+        <div id="recommendations-container">
+            {% for movie in recommendations %}
+              <p class="recommendation">{{loop.index}}. {{movie}}</p>
+            {% endfor %}
+        </div>
+    </body>
+</html>
